@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseball Analytics Hub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-content">
+            <h1 class="nav-title">⚾ Baseball Analytics Hub</h1>
+            <div class="nav-links">
+                <a href="#game-insights">Game Insights</a>
+                <a href="#live-game">Live Game</a>
+                <a href="#standings">Standings</a>
+                <a href="#player-styles">Analysis</a>
+                <a href="#player-styles">Insights</a>
+                <a href="#player-styles">Game Outcome Predictions</a>
+                <a href="#fan-engagement">Fan Insights</a>
+                <a href="#news">Latest News</a>
+                <a href="#advanced-insights">Advanced Game Intelligence</a>
+                <a href="#predictive-model-section">Comprehensive Analytics Framework</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Real-Time Baseball Analytics</h1>
+        <p>Advanced statistics, player insights, and game predictions powered by data</p>
+    </section>
+
+    <main class="main-content">
+        <section id="game-insights">
+            <h2>Game Level Insights</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Win Probability</h3>
+                    <div class="stat-value">87%</div>
+                    <p>Current win probability based on game situation</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pitch Analysis</h3>
+                    <div class="stat-value">95.2</div>
+                    <p>Average fastball velocity (mph)</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Hit Quality</h3>
+                    <div class="stat-value">105.4</div>
+                    <p>Exit velocity on last hit (mph)</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Team Performance Trends</h3>
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </section>
+
+        <section id="live-game" class="live-game-tracker">
+            <h2>Live Game Tracker</h2>
+            <div class="game-score">
+                <div class="team-score">
+                    <h3>Yankees</h3>
+                    <div class="score">5</div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="team-score">
+                    <h3>Red Sox</h3>
+                    <div class="score">3</div>
+                </div>
+            </div>
+            <div class="game-details">
+                <div>
+                    <h4>Current Inning</h4>
+                    <p>Top 7th</p>
+                </div>
+                <div>
+                    <h4>Pitch Count</h4>
+                    <p>87</p>
+                </div>
+                <div>
+                    <h4>Current Pitcher</h4>
+                    <p>C. Rodriguez</p>
+                </div>
+                <div>
+                    <h4>Current Batter</h4>
+                    <p>M. Thompson</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="standings" class="mt-5">
+            <h2>League Standings</h2>
+            <table class="standings-table">
+                <thead>
+                    <tr>
+                        <th>Team</th>
+                        <th>W</th>
+                        <th>L</th>
+                        <th>PCT</th>
+                        <th>GB</th>
+                        <th>L10</th>
+                        <th>STRK</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Yankees</td>
+                        <td>92</td>
+                        <td>58</td>
+                        <td>.613</td>
+                        <td>-</td>
+                        <td>7-3</td>
+                        <td>W4</td>
+                    </tr>
+                    <tr>
+                        <td>Red Sox</td>
+                        <td>88</td>
+                        <td>62</td>
+                        <td>.587</td>
+                        <td>4.0</td>
+                        <td>6-4</td>
+                        <td>L1</td>
+                    </tr>
+                    <tr>
+                        <td>Blue Jays</td>
+                        <td>85</td>
+                        <td>65</td>
+                        <td>.567</td>
+                        <td>7.0</td>
+                        <td>5-5</td>
+                        <td>W2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="player-styles" class="player-style-section mt-5">
+            <h2>Player Style Analysis</h2>
+            <p>Discover unique player archetypes based on performance patterns and playing characteristics.</p>
+            <div class="player-style-grid">
+                <div class="player-style-card">
+                    <div class="player-style-icon">💥</div>
+                    <h3>Power Hitter</h3>
+                    <p>High exit velocity, focus on home runs and extra-base hits</p>
+                    <p>Key Players: M. Thompson, A. Judge</p>
+                </div>
+                <div class="player-style-card">
+                    <div class="player-style-icon">🎯</div>
+                    <h3>Precision Pitcher</h3>
+                    <p>High control, low walk rates, strategic pitch placement</p>
+                    <p>Key Players: C. Rodriguez, M. Scherzer</p>
+                </div>
+                <div class="player-style-card">
+                    <div class="player-style-icon">🏃</div>
+                    <h3>Speed Demon</h3>
+                    <p>Exceptional base running, high stolen base rates</p>
+                    <p>Key Players: J. Merrifield, T. Turner</p>
+                </div>
+                <div class="player-style-card">
+                    <div class="player-style-icon">🛡</div>
+                    <h3>Defensive Specialist</h3>
+                    <p>Exceptional fielding, range, and defensive metrics</p>
+                    <p>Key Players: A. Kiermaier, N. Arenado</p>
+                </div>
+            </div>
+        </section>
+        <section id="player-insights" class="advanced-stats-section">
+            <h2 class="mb-3">Advanced Player Insights</h2>
+            <div class="player-insights-grid">
+                <div class="player-card">
+                    <h3>Rookie Performance</h3>
+                    <p>Tracking top rookie players and their season progression</p>
+                    <div class="stat-value">M. Thompson</div>
+                    <p>Rookie of the Year Candidate</p>
+                </div>
+                <div class="player-card">
+                    <h3>Defensive Metrics</h3>
+                    <div class="stat-value">98.5%</div>
+                    <p>Fielding Percentage Leader</p>
+                    <p>Top Defensive Player: J. Martinez</p>
+                </div>
+                <div class="player-card">
+                    <h3>Clutch Performance</h3>
+                    <div class="stat-value">+0.85</div>
+                    <p>Clutch Performance Index</p>
+                    <p>Top Clutch Performer: A. Rodriguez</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Predictive Insights -->
+        <section id="predictions" class="prediction-section">
+            <h2>Game Outcome Predictions</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Win Probability Model</h3>
+                    <div class="stat-value">62%</div>
+                    <p>Yankees' current win probability</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Season Projection</h3>
+                    <div class="stat-value">94</div>
+                    <p>Projected Season Wins</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Playoff Chances</h3>
+                    <div class="stat-value">85%</div>
+                    <p>Estimated playoff qualification</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Fan Engagement -->
+        <section id="fan-engagement" class="news-section">
+            <h2>Fan Insights</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="embed-responsive embed-responsive-16by9 news-video">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ObVGh_mqxqc" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">Mar 22, 2023</div>
+                        <h3>KEEP GETTING BETTER!</h3>
+                        <p>Team USA takes on Team Japan in the 2023 World Baseball Classic Final!</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="embed-responsive embed-responsive-16by9 news-video">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qkRUcYHJ1JI" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">Mar 22, 2023</div>
+                        <h3>Wrapped Highlights</h3>
+                        <p>Team USA takes on Team Japan in the 2023 World Baseball Classic Final!</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="embed-responsive embed-responsive-16by9 news-video">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vONWlelc-ws" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">May 7, 2024</div>
+                        <h3>Top Plays</h3>
+                        <p>God sure has blessed these player that have this amazing talent and opportunity to play in the big leagues</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="news-section">
+            <h2>Latest News</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="embed-responsive embed-responsive-16by9 news-video">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HXJu7uaM71c" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">Apr 19, 2024</div>
+                        <h3>Most Powerful Home Runs</h3>
+                        <p>Ronald Acuña jr. and Oneil Cruz are just absolutely have made the scores going crazy</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="embed-responsive embed-responsive-16by9 news-video">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JrCiPDeOZW0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">Dec 23, 2023</div>
+                        <h3>Incredible</h3>
+                        <p>Incredible diving catches that get increasingly more insane</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="embed-responsive embed-responsive-16by9 news-video">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JjoAFfeIJ_I" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">May 14, 2024</div>
+                        <h3>Best Plays May</h3>
+                        <p>The skills of the players are just incredible and astonishing</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="embed-responsive embed-responsive-16by9 news-video">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Q0McpCbOa_I" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">Jun 21, 2022</div>
+                        <h3>Instant Injuries</h3>
+                        <p>MLB should implements a collision warning for the outfielders</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-insights">
+            <div class="main-content">
+                <h2>Advanced Game Intelligence</h2>
+                <div class="stats-grid">
+                    <div class="stat-card advanced-stat-card">
+                        <div class="advanced-stat-icon">📊</div>
+                        <div>
+                            <h3>Predictive Win Probability</h3>
+                            <div class="stat-value">87.6%</div>
+                            <p>Machine Learning Real-Time Prediction</p>
+                        </div>
+                    </div>
+                    <div class="stat-card advanced-stat-card">
+                        <div class="advanced-stat-icon">🚀</div>
+                        <div>
+                            <h3>Advanced Pitch Analysis</h3>
+                            <div class="stat-value">95.7 mph</div>
+                            <p>Adaptive Performance Metrics</p>
+                        </div>
+                    </div>
+                    <div class="stat-card advanced-stat-card">
+                        <div class="advanced-stat-icon">💥</div>
+                        <div>
+                            <h3>Dynamic Hit Quality</h3>
+                            <div class="stat-value">108.3</div>
+                            <p>Exit Velocity Intelligence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Insights Grid -->
+        <section class="advanced-insights">
+            <div class="main-content">
+                <h2 class="mb-3">Comprehensive Analytics Framework</h2>
+                <div class="insight-grid">
+                    <div class="insight-card">
+                        <h3>Neural Network Performance Prediction</h3>
+                        <p>Machine learning models predicting player and team performance with 92% accuracy.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Real-Time Strategic Intelligence</h3>
+                        <p>Adaptive game strategy recommendations based on live game data and historical patterns.</p>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Psychological Performance Index</h3>
+                        <p>Advanced metrics tracking player mental resilience and performance under pressure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Predictive Modeling Section -->
+        <section class="predictive-model-section">
+            <div class="main-content machine-learning-insights">
+                <div>
+                    <h2>AI-Powered Baseball Intelligence</h2>
+                    <p>Leveraging deep learning algorithms to provide unprecedented insights into player performance, game dynamics, and strategic decision-making.</p>
+                </div>
+                <div>
+                    <h3>Key Machine Learning Features:</h3>
+                    <ul>
+                        <li>Predictive Performance Modeling</li>
+                        <li>Real-Time Strategic Recommendations</li>
+                        <li>Advanced Player Potential Assessment</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Existing footer content -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>About Us</h3>
+                <p>Providing cutting-edge baseball analytics and insights</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <p>Game Insights</p>
+                <p>Live Game</p>
+                <p>Standings</p>
+                <p>News</p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: info@baseballanalytics.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
